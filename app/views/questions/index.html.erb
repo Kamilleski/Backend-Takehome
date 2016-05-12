@@ -1,9 +1,18 @@
 
 <h1>Question-o-tron</h1>
 <h3>How many questions would you like to be asked?</h3>
-<form>
   <%= form_for @num_questions do |f| %>
     <%= f.label :number_of_questions %>
     <%= f.number_field :number_of_questions %>
-  <%= f.submit "Submit" %>
-</form>
+    <%= f.submit "Submit" %>
+  <% end %>
+<!-- Some Ajaxey stuff -->
+  <h2>Your question id list:</h2>
+  <ul>
+    <% @num_questions.times do %>
+      <li>
+        <% @questions.each do |q| %>
+          <%= q.id %>
+        <% end %>
+      </li>
+  </ul>
