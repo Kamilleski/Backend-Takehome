@@ -1,0 +1,9 @@
+
+<h1>Question-o-tron</h1>
+<h3>How many questions would you like to be asked?</h3>
+<form>
+  <%= form_for @num_questions do |f| %>
+    <%= f.label :number_of_questions %>
+    <%= f.number_field :number_of_questions %>
+  <%= f.submit "Submit" %>
+</form>
