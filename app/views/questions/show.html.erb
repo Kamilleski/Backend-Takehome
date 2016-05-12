@@ -1,0 +1,9 @@
+<h2>Your question id list:</h2>
+<ul>
+  <% @num_questions.times do %>
+    <li>
+      <% @questions.each do |q| %>
+        <%= q.id %>
+      <% end %>
+    </li>
+</ul>
